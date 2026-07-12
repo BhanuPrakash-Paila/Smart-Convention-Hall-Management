@@ -45,7 +45,12 @@ export function BookingStatusManager() {
       body: JSON.stringify({ bookingId }),
     });
     const data = await response.json();
-    const blob = new Blob([`Invoice ID: ${data.invoiceId}\nCustomer: ${data.customerName}\nAmount: ₹${data.amount}`], { type: "text/plain;charset=utf-8" });
+    const blob = new Blob(
+      [
+        `Invoice ID: ${data.invoiceId}\nCustomer: ${data.customerName}\nAmount: ₹${data.amount}`,
+      ],
+      { type: "text/plain;charset=utf-8" },
+    );
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
@@ -61,12 +66,17 @@ export function BookingStatusManager() {
   return (
     <div className="space-y-4">
       {bookings.map((booking) => (
-        <div key={booking.id} className="rounded-2xl border border-white/10 bg-slate-900/70 p-5">
+        <div
+          key={booking.id}
+          className="rounded-2xl border border-white/10 bg-slate-900/70 p-5"
+        >
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="font-semibold text-white">{booking.customerName}</p>
               <p className="text-sm text-slate-400">{booking.email}</p>
-              <p className="mt-2 text-sm text-slate-400">{booking.eventDate} • {booking.packageType}</p>
+              <p className="mt-2 text-sm text-slate-400">
+                {booking.eventDate} • {booking.packageType}
+              </p>
             </div>
             <div className="flex flex-wrap gap-2">
               {statuses.map((status) => (
@@ -78,7 +88,10 @@ export function BookingStatusManager() {
                   {status}
                 </button>
               ))}
-              <button onClick={() => generateInvoice(booking.id)} className="rounded-full bg-emerald-500 px-3 py-2 text-sm text-slate-950">
+              <button
+                onClick={() => generateInvoice(booking.id)}
+                className="rounded-full bg-emerald-500 px-3 py-2 text-sm text-slate-950"
+              >
                 Invoice
               </button>
             </div>

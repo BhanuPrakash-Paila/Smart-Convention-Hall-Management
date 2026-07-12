@@ -1,8 +1,10 @@
-import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
 export async function GET() {
-  const bookings = await prisma.booking.findMany({ orderBy: { createdAt: 'desc' } });
+  const bookings = await prisma.booking.findMany({
+    orderBy: { createdAt: "desc" },
+  });
   return NextResponse.json(bookings);
 }
 
@@ -23,7 +25,7 @@ export async function POST(request: Request) {
       notes: payload.notes,
       estimatedTotal: Number(payload.estimatedTotal),
       advancePaid: Number(payload.advancePaid),
-      status: payload.status || 'Pending',
+      status: payload.status || "Pending",
     },
   });
   return NextResponse.json(booking, { status: 201 });

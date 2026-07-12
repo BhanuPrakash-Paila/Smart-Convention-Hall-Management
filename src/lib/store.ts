@@ -27,7 +27,9 @@ export function getBookings(): BookingRecord[] {
   return bookings;
 }
 
-export function addBooking(booking: Omit<BookingRecord, "id" | "status" | "createdAt">): BookingRecord {
+export function addBooking(
+  booking: Omit<BookingRecord, "id" | "status" | "createdAt">,
+): BookingRecord {
   const record: BookingRecord = {
     ...booking,
     id: `BK-${Math.floor(1000 + Math.random() * 9000)}`,

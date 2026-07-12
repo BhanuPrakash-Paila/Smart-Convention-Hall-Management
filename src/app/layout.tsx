@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Smart Convention Hall Management",
-  description: "Modern Next.js starter for convention hall operations and event booking.",
+  description:
+    "Modern Next.js starter for convention hall operations and event booking.",
 };
 
 export default function RootLayout({

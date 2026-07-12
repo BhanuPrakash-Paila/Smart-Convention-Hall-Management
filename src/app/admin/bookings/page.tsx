@@ -1,4 +1,4 @@
-import { BookingStatusManager } from '@/components/admin/BookingStatusManager';
+import { BookingStatusManager } from "@/components/admin/BookingStatusManager";
 
 export default function BookingsPage() {
   return (

@@ -1,8 +1,10 @@
-import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
 export async function GET() {
-  const packages = await prisma.pricePackage.findMany({ orderBy: { createdAt: 'asc' } });
+  const packages = await prisma.pricePackage.findMany({
+    orderBy: { createdAt: "asc" },
+  });
   return NextResponse.json(packages);
 }
 

@@ -11,8 +11,13 @@ export const packages = [
   {
     name: "Wedding Deluxe",
     price: 180000,
-    description: "Ideal for grand weddings with premium decoration and catering support.",
-    highlights: ["Premium stage setup", "Catering coordination", "Photography support"],
+    description:
+      "Ideal for grand weddings with premium decoration and catering support.",
+    highlights: [
+      "Premium stage setup",
+      "Catering coordination",
+      "Photography support",
+    ],
   },
   {
     name: "Birthday Celebration",
@@ -23,7 +28,8 @@ export const packages = [
   {
     name: "Corporate Event",
     price: 95000,
-    description: "Professional package for conferences, seminars, and corporate gatherings.",
+    description:
+      "Professional package for conferences, seminars, and corporate gatherings.",
     highlights: ["Projector support", "Seating layout", "Audio-visual setup"],
   },
 ];
@@ -38,19 +44,33 @@ export const services = [
 ];
 
 export const galleryItems = [
-  { title: "Grand Reception", image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80" },
-  { title: "Wedding Setup", image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80" },
-  { title: "Corporate Seminar", image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" },
+  {
+    title: "Grand Reception",
+    image:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Wedding Setup",
+    image:
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Corporate Seminar",
+    image:
+      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80",
+  },
 ];
 
 export const testimonials = [
   {
     name: "Asha Rao",
-    quote: "The booking experience was smooth and the team handled our wedding beautifully.",
+    quote:
+      "The booking experience was smooth and the team handled our wedding beautifully.",
   },
   {
     name: "Raghav Menon",
-    quote: "The admin dashboard made our coordination effortless. Highly recommended.",
+    quote:
+      "The admin dashboard made our coordination effortless. Highly recommended.",
   },
 ];
 
